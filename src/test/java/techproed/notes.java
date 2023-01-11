@@ -1,6 +1,6 @@
 package techproed;
 
-public class q {
+public class notes {
 }
 /*
 https://testng.org/doc/documentation-main.html
