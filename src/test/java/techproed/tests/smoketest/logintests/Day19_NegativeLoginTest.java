@@ -1,6 +1,5 @@
 package techproed.tests.smoketest.logintests;
 import com.github.javafaker.Faker;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import techproed.pages.HomePage;
