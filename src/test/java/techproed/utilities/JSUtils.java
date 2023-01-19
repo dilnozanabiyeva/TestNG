@@ -20,7 +20,7 @@ public class JSUtils {
         JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());
         jsexecutor.executeScript("window.scrollTo(0,document.body.scrollHeight)");
     }
-    //    Scroll al the way up of a page
+    //    Scroll all the way up of a page
     public static void scrollAllUpByJS(){
         JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
         js.executeScript("window.scrollTo(0,-document.body.scrollHeight)");
@@ -35,20 +35,20 @@ public class JSUtils {
         JavascriptExecutor javascriptExecutor = ((JavascriptExecutor) Driver.getDriver());
         javascriptExecutor.executeScript("arguments[0].style.backgroundColor = '" + color + "'", element);
         try {
-            Thread.sleep(5000);
+            Thread.sleep(200);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
-    //Flashing teh background color
+    //Flashing the background color
     public static void flash(WebElement element) {
         String bgColor = element.getCssValue("backgroundcolor");
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             changeColor("rgb(0,200,0", element);
             changeColor(bgColor, element);
         }
     }
-    //this will enerate an alert when needed
+    //this will generate an alert when needed
     public static void generateAlert(String message) throws InterruptedException {
         JavascriptExecutor javascriptExecutor = ((JavascriptExecutor) Driver.getDriver());
         javascriptExecutor.executeScript("alert('" + message + "')");
